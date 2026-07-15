@@ -1,0 +1,38 @@
+@media (max-width: 992px) {
+  .bh-desktop-menu, .bh-search-box, .adobe-logo-link {
+    display: none;
+  }
+  
+  .bh-mobile-toggle {
+    display: flex;
+  }
+
+  /* Structural side drawer layout adjustments */
+  .bh-desktop-menu.active {
+    display: block;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background: var(--bh-white);
+    border-bottom: 1px solid var(--bh-border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .bh-nav-links {
+    flex-direction: column;
+    height: auto;
+    padding: 16px 0;
+  }
+
+  .bh-link {
+    height: 44px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .bh-link.active::after, .bh-link:hover::after {
+    display: none;
+  }
+}
+
