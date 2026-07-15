@@ -1,0 +1,1230 @@
+*{
+    margin: 0;
+    font-family:Arial;
+    border: border-box;
+
+}
+
+
+.navbar {
+    height:55px;
+    padding: 0px 24px ;
+
+}
+.nav-logo{
+    height:33.6px;
+    width: 82px;
+    padding: 6px 0px 8px;
+
+}
+.logo{
+    background-image: none;
+
+}
+/* Font Setup & Global Variables */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+  --bh-white: #FFFFFF;
+  --bh-black: #191919;
+  --bh-muted: #707070;
+  --bh-blue: #0057FF;
+  --bh-gray-bg: #F5F5F5;
+  --bh-border: #EAEAEA;
+}
+
+/* Base Top Bar Constraints */
+.bh-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px; /* Exact size matching the inspection label 434.44 x 55 */
+  background-color: var(--bh-white);
+  border-bottom: 1px solid var(--bh-border);
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+.bh-nav-container {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px; /* Matches the padding 0px 24px shown on your screenshot */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Group Framework */
+.bh-nav-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 24px;
+}
+
+.bh-logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 19px;
+  color: var(--bh-black);
+  letter-spacing: -0.8px;
+}
+
+.bh-logo-box {
+  background-color: var(--bh-blue);
+  color: var(--bh-white);
+  padding: 1px 7px;
+  border-radius: 3px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+/* Nav Menu Stack Layout */
+.bh-nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 55px;
+}
+
+.bh-link {
+  text-decoration: none;
+  color: var(--bh-black);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0 16px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s ease;
+  position: relative;
+}
+
+.bh-link:hover, .bh-link.active {
+  color: var(--bh-blue);
+}
+
+/* Underline indicator on active/hover elements */
+.bh-link.active::after, .bh-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background-color: var(--bh-black);
+}
+
+.drop-icon {
+  font-size: 9px;
+  margin-left: 5px;
+  color: var(--bh-muted);
+}
+
+/* Center-Right Search Module Setup */
+.bh-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 18px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--bh-muted);
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.bh-search-input {
+  width: 205.46px; /* Exact size metric specified in screenshot data */
+  height: 30.4px;  /* Exact layout height specified in snapshot */
+  background-color: var(--bh-gray-bg);
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 0 14px 0 34px;
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+  color: var(--bh-black);
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.bh-search-input:focus {
+  background-color: var(--bh-white);
+  border-color: var(--bh-blue);
+}
+
+/* Action System Links Styling */
+.bh-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.bh-link-login {
+  text-decoration: none;
+  color: var(--bh-blue);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.bh-btn-cta {
+  text-decoration: none;
+  background-color: var(--bh-blue);
+  color: var(--bh-white);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 18px;
+  transition: background-color 0.15s ease;
+}
+
+.bh-btn-cta:hover {
+  background-color: #0043cc;
+}
+
+.adobe-logo-link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  color: #FF0000;
+  border-left: 1px solid var(--bh-border);
+  padding-left: 14px;
+}
+
+/* Mobile system initialization button */
+.bh-mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.bh-mobile-toggle span {
+  width: 20px;
+  height: 2px;
+  background-color: var(--bh-black);
+}
+/* Dark Mega Footer Architecture */
+.bh-mega-footer {
+  width: 100%;
+  background-color: #191919; /* Behance Core Dark Base */
+  color: #FFFFFF;
+  padding-top: 60px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.bh-footer-top-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px 50px 24px;
+}
+
+/* 4-Column Flex/Grid Layout */
+.bh-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.bh-col-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 24px;
+  letter-spacing: -0.2px;
+}
+
+.bh-col-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bh-col-links a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #959595; /* Soft gray tone matched to your image */
+  transition: color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bh-col-links a:hover {
+  color: #FFFFFF;
+}
+
+/* Social Icon Custom Weights */
+.social-links i {
+  font-size: 15px;
+  color: #959595;
+  width: 18px;
+}
+
+.bh-col-links a:hover i {
+  color: #FFFFFF;
+}
+
+/* Bottom Copyright Bar Area */
+.bh-footer-bottom-wrap {
+  width: 100%;
+  border-top: 1px solid #2C2C2C; /* Deep separator border */
+  padding: 24px 0;
+  background-color: #141414; /* Slightly darker shade for base plate */
+}
+
+.bh-bottom-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bh-bottom-left, .bh-bottom-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bh-adobe-logo {
+  font-weight: 800;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+.bh-copyright {
+  font-size: 12px;
+  color: #757575;
+  font-weight: 600;
+}
+
+.bh-bottom-right {
+  gap: 16px;
+}
+
+.bh-bottom-link {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: #959595;
+}
+
+.bh-bottom-link:hover {
+  color: #FFFFFF;
+}
+
+.privacy-opt {
+  color: #757575;
+}
+
+.f-arrow {
+  font-size: 8px;
+  margin-left: 2px;
+}
+
+/* Responsive Structural Collapse */
+@media (max-width: 992px) {
+  .bh-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bh-footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .bh-mega-footer {
+    padding-top: 40px;
+  }
+}
+
+
+/* Container & Flow Layout Styles */
+.bh-main-content {
+  background-color: #F3F6F6 !important; /* Soft studio gray canvas background */
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Healthy vertical breathing space between project sections */
+  padding: 0 0 120px 0 !important; /* Extra bottom padding so footer doesn't clip content */
+}
+
+/* 1. Intro Header Styling */
+.bh-intro-header {
+  width: 100%;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 20px 40px;
+}
+
+.bh-profile-meta {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bh-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bh-project-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+.bh-author {
+  font-size: 13px;
+  color: #696969;
+  margin: 0;
+}
+
+.follow-btn {
+  color: #0057FF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* 2. Software Canvas Logo and Badges */
+.bh-software-canvas {
+  background-color: #FFFFFF;
+  max-width: 1100px;
+  width: 95%;
+  margin: 40px auto;
+  border-radius: 12px;
+  padding: 80px 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.bh-branding-logo {
+  text-align: center;
+}
+
+.bh-logo-svg {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.logo-text h3 {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0 0 8px 0;
+}
+
+.logo-text p {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Badges Floating Positions */
+.software-badge-container .badge {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.badge-dv { background: linear-gradient(135deg, #FF6B00, #FF007A); top: 20%; left: 15%; }
+.badge-pr { background-color: #00005C; top: 50%; left: 20%; border: 2px solid #1473E6; color: #1473E6 !important;}
+.badge-ps { background-color: #001E36; top: 15%; right: 25%; border: 2px solid #00C8FF; color: #00C8FF !important; }
+.badge-ae { background-color: #1A002C; top: 45%; right: 15%; border: 2px solid #D199FF; color: #D199FF !important; }
+
+/* 3. About Me Grid */
+.bh-about-section {
+  max-width: 1100px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.quennel-photo {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.section-badge {
+  color: #777;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.main-heading {
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 900;
+  color: #191919;
+  margin: 12px 0 24px 0;
+}
+
+.bio-paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.meta-info-row {
+  display: flex;
+  gap: 30px;
+  border-top: 1px solid #DDD;
+  padding-top: 24px;
+}
+
+.meta-info-row div strong {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.meta-info-row div p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 4px 0 0 0;
+  color: #111;
+}
+
+/* 4. Motion Graphic Section Side-By-Side */
+.project-slide-block {
+  max-width: 1100px;
+  width: 95%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.slide-big-title {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #191919;
+}
+
+.slide-subtitle {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.preview-card img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* 5. Sticky Bottom Action Toast Control */
+.bh-hiring-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2B2B2B;
+  border-radius: 100px;
+  padding: 10px 14px 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  z-index: 1000;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  width: max-content;
+  max-width: 90%;
+}
+
+.toast-avatar-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toast-mini-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.toast-text {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.toast-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-hire {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-hire:hover {
+  opacity: 0.9;
+}
+
+.btn-save {
+  background-color: #404040;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-save:hover {
+  background-color: #505050;
+}
+
+.toast-close-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 6px 0 0;
+}
+
+/* 6. Vertical Work Grid */
+.projects-vertical-grid {
+  max-width: 1100px;
+  width: 95%;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.grid-card img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.grid-card img:hover {
+  transform: translateY(-4px);
+}
+
+/* Responsive Media Controls */
+@media (max-width: 768px) {
+  .about-grid, .project-slide-block, .projects-vertical-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .bh-hiring-toast {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 16px;
+    width: 90%;
+  }
+  .toast-actions {
+    width: 100%;
+  }
+  .toast-actions button {
+    flex: 1;
+  }
+}
+
+/* ==========================================================
+   1. CORE ANIMATION & INTERACTIVE KEYFRAMES
+   ========================================================== */
+
+/* Infinite Float Keyframes for Badges (Har badge ka wave style alag hai) */
+
+
+
+/* ==========================================================
+   2. SCROLL TRIGGER REVEAL CONTROLLERS (For Main Content)
+   ========================================================== */
+
+/* Default State: Hidden and shifted down slightly */
+.bh-software-canvas,
+.bh-about-section,
+.experience-block,
+.project-slide-block,
+.projects-vertical-grid .grid-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1),
+              transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: transform, opacity;
+}
+
+/* Active State: Triggered when "active-reveal" class is applied */
+.active-reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Grid Cards Delay Effect (Cascade appearance) */
+.projects-vertical-grid .grid-card:nth-child(1) { transition-delay: 0.1s; }
+.projects-vertical-grid .grid-card:nth-child(2) { transition-delay: 0.2s; }
+.projects-vertical-grid .grid-card:nth-child(3) { transition-delay: 0.3s; }
+.projects-vertical-grid .grid-card:nth-child(4) { transition-delay: 0.4s; }
+
+
+/* ==========================================================
+   3. ELASTIC MOUSE HOVER ACTIONS
+   ========================================================== */
+
+/* Badge Elastic Pop on Hover */
+.badge {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.3s ease !important;
+}
+.badge:hover {
+  transform: scale(1.2) !important;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Project Card & Image Zoom Effect */
+.preview-card, .grid-card {
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              box-shadow 0.4s ease;
+}
+
+.preview-card img, .grid-card img {
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.preview-card:hover, .grid-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.preview-card:hover img, .grid-card:hover img {
+  transform: scale(1.04);
+}
+
+
+/* ==========================================================
+   4. TOAST ENTRANCE & HOVER UI
+   ========================================================== */
+.bh-hiring-toast {
+  transform: translate(-50%, 100px); /* Initially off-screen bottom */
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.2), 
+              opacity 0.6s ease;
+}
+
+/* Added active state for toast overlay trigger */
+.bh-hiring-toast.toast-active {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+
+
+/* Glitch/Slice Animation Container Setup */
+.mg-glitch-container {
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin-bottom: 24px;
+}
+
+.mg-static-text {
+  font-size: 56px;
+  font-weight: 900;
+  color: #191919;
+  line-height: 1;
+}
+
+/* Sliced Stack Base */
+.mg-sliced-wrapper {
+  position: relative;
+  display: block;
+  height: 65px; /* Adjust according to font-size context */
+}
+
+.mg-layer {
+  font-size: 56px;
+  font-weight: 900;
+  color: #191919;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1;
+  width: 100%;
+}
+
+/* Clip-path setup to split word horizontally in half */
+.layer-top {
+  /* Only shows upper half of the text */
+  clip-path: inset(0px 0px 50% 0px);
+  animation: upperSlice 4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  transform-origin: left bottom;
+}
+
+.layer-bottom {
+  /* Only shows bottom half of the text */
+  clip-path: inset(50% 0px 0px 0px);
+  animation: lowerSlice 4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  transform-origin: left top;
+}
+
+
+/* ==========================================================
+   THE BIG BANG SYSTEM: COLLAPSE & EXPLOSION MULTI-TIMELINE
+   ========================================================== */
+
+/* --- 1. THE MAIN LOGO CANVAS & TEXT --- */
+.bh-branding-logo {
+  animation: logoExplosion 6s cubic-bezier(0.25, 1, 0.2, 1) infinite;
+  transform-origin: center;
+  position: relative;
+  z-index: 10; /* Base level */
+  will-change: transform, z-index;
+}
+
+@keyframes logoExplosion {
+  0% {
+    transform: scale(1);
+    z-index: 10;
+  }
+  /* 0% to 30%: Logo slowly shrinks, acting like a magnet pulling badges inside */
+  30% {
+    transform: scale(0.75);
+    z-index: 10;
+    filter: blur(0px);
+  }
+  /* 33% to 38%: THE SUDDEN POP UP (Sudden blast to the extreme front) */
+  35% {
+    transform: scale(1.35); /* Sudden massive pop up forward */
+    z-index: 999; /* Comes completely to the front layer */
+    filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
+  }
+  /* 38% to 55%: Slowly settles back to normal position */
+  55%, 100% {
+    transform: scale(1);
+    z-index: 10;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.02));
+  }
+}
+
+
+/* --- 2. THE BADGES TIMELINE (Suck In -> Throw Out) --- */
+
+/* Base setup for badges to allow absolute positioning math from center */
+.software-badge-container .badge {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+/* Individual Badge Keyframes synced perfectly with the 35% Explosion Mark */
+
+/* BADGE 1: DaVinci (Top Left) */
+@keyframes dvBlast {
+  0% { transform: translate(0, 0); }
+  /* Pulled completely inside the center text/logo */
+  30% { transform: translate(160px, 120px) scale(0); opacity: 0; } 
+  /* SUDDENLY THROWN OUT! */
+  35% { transform: translate(-30px, -20px) scale(1.4); opacity: 1; }
+  /* Settle down to slow idle floating */
+  55%, 100% { transform: translate(0, 0) translateY(-6px); }
+}
+
+/* BADGE 2: Premiere Pro (Bottom Left) */
+@keyframes prBlast {
+  0% { transform: translate(0, 0); }
+  30% { transform: translate(120px, -60px) scale(0); opacity: 0; }
+  35% { transform: translate(-40px, 30px) scale(1.4); opacity: 1; }
+  55%, 100% { transform: translate(0, 0) translateY(4px); }
+}
+
+/* BADGE 3: Photoshop (Top Right) */
+@keyframes psBlast {
+  0% { transform: translate(0, 0); }
+  30% { transform: translate(-140px, 140px) scale(0); opacity: 0; }
+  35% { transform: translate(45px, -35px) scale(1.4); opacity: 1; }
+  55%, 100% { transform: translate(0, 0) translateY(-4px); }
+}
+
+/* BADGE 4: After Effects (Bottom Right) */
+@keyframes aeBlast {
+  0% { transform: translate(0, 0); }
+  30% { transform: translate(-180px, -40px) scale(0); opacity: 0; }
+  35% { transform: translate(35px, 25px) scale(1.4); opacity: 1; }
+  55%, 100% { transform: translate(0, 0) translateY(6px); }
+}
+
+
+/* --- 3. ASSIGNING THE TIMELINES TO MATCH --- */
+/* Total duration (6s) matches the logo perfectly so they run in absolute harmony */
+.badge-dv { animation: dvBlast 6s cubic-bezier(0.1, 0.8, 0.1, 1) infinite; }
+.badge-pr { animation: prBlast 6s cubic-bezier(0.1, 0.8, 0.1, 1) infinite; }
+.badge-ps { animation: psBlast 6s cubic-bezier(0.1, 0.8, 0.1, 1) infinite; }
+.badge-ae { animation: aeBlast 6s cubic-bezier(0.1, 0.8, 0.1, 1) infinite; }
+
+
+
+
+/* Main Container Wraps */
+.bh-work-showcase {
+  max-width: 1400px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* Generous Behance studio vertical padding gap */
+}
+
+/* Row 1: Experience Split Design */
+.bh-experience-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.exp-huge-heading {
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #24415A; /* Dark Behance professional corporate tone */
+  letter-spacing: -1px;
+}
+
+.bh-exp-right-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bh-exp-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+.bh-exp-card .exp-timeline {
+  display: inline-block;
+  font-size: 13px;
+  color: #777;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.bh-exp-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Row 2: Motion Split Engine */
+.bh-motion-split-screen {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 100px;
+  align-items: center;
+  background: #EAF2F8; /* Light icy blue backdrop overlay from screenshot 2 */
+  padding: 80px;
+  border-radius: 24px;
+}
+
+.bh-motion-text-side .slide-subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4A5568;
+  margin-top: 20px;
+}
+
+/* Vertical Mobile Card Mockup Showcase */
+.bh-vertical-preview-card {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  margin: 0 auto;
+}
+
+.bh-vertical-preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay-title {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Row 3: Five Column Grid System */
+.bh-five-column-showcase {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+/* Row 4: Product Packaging Grid System */
+.bh-triple-column-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+  .bh-experience-container, .bh-motion-split-screen {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px;
+  }
+  .bh-five-column-showcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bh-triple-column-showcase {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================================================
+   SAFE INTERACTIVE MOTION GRAPHICS BLOCK (NO VANISHING)
+   ========================================================== */
+
+/* Background Setup - Default visible */
+.bh-motion-split-screen {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #EAF2F8 0%, #DCEAF5 100%);
+  padding: 80px;
+  border-radius: 24px;
+}
+
+/* Left-Side Typography: Default Visible, Animate smoothly when page loads */
+.bh-motion-text-side {
+  opacity: 1; /* Pure visible state guarantee */
+  transform: translateX(0);
+  animation: slideInLeft 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* Right-Side Card Layout: Default Visible with elastic bounce */
+.bh-motion-preview-side {
+  opacity: 1; /* Pure visible state guarantee */
+  transform: translateY(0) scale(1);
+  animation: springUp 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+}
+
+/* --- OPTIONAL LOAD-IN ENTRANCES --- */
+@keyframes slideInLeft {
+  0% { transform: translateX(-30px); opacity: 0.5; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes springUp {
+  0% { transform: translateY(40px) scale(0.95); opacity: 0.5; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+
+/* --- THE HOVER HOOKS (Yeh bina kisi bug ke chalega) --- */
+.bh-vertical-preview-card {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* Neon glow trace line behind card */
+.bh-vertical-preview-card::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, #0057FF, #00C8FF, transparent, transparent);
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover Elastic Pop Matrix */
+.bh-vertical-preview-card:hover {
+  transform: translateY(-12px) rotateY(-6deg) rotateX(4deg);
+  box-shadow: -15px 25px 50px rgba(36, 65, 90, 0.25);
+}
+
+.bh-vertical-preview-card:hover::before {
+  opacity: 1;
+}
+
+/* Image Zoom scale */
+.bh-vertical-preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.bh-vertical-preview-card:hover img {
+  transform: scale(1.1) rotate(1deg);
+}
+
+
+/* ==========================================================
+   3D INFINITE VERTICAL SCROLL ENGINE (UP TO DOWN)
+   ========================================================== */
+
+/* Outer Side Container to handle 3D depth */
+.bh-motion-preview-side {
+  perspective: 1500px; /* Gives realistic 3D distance */
+}
+
+/* The Main Card Box */
+.bh-vertical-preview-card {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0d1117; /* Dark elegant backdrop */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  transform-style: preserve-3d; /* Allows child items to move in 3D space */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.6s ease;
+}
+
+/* Card Hover Tilt & Intense Blue Light Pop */
+.bh-vertical-preview-card:hover {
+  transform: translateY(-15px) rotateY(-12deg) rotateX(10deg);
+  box-shadow: -20px 30px 60px rgba(0, 87, 255, 0.35), 
+              0 0 40px rgba(0, 200, 255, 0.15);
+}
+
+/* Smooth Fade/Blur effect on Top & Bottom edges of the card */
+.bh-scroll-track-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Masking edges so images smoothly blend in and out on scroll */
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+/* Continuous Scroll Track */
+.bh-scroll-track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+  transform-style: preserve-3d;
+  animation: scrollUpToDown 20s linear infinite; /* Smooth continuous scroll */
+}
+
+/* Individual Scrolling Images */
+.bh-scroll-track img {
+  width: 88%;
+  margin: 0 auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+              filter 0.5s ease;
+  transform: translateZ(0); /* Default flat position */
+}
+
+/* Interactive Hover Actions */
+.bh-vertical-preview-card:hover .bh-scroll-track {
+  animation-play-state: paused; /* Hover करने पर स्क्रॉल रुक जाएगा ताकि यूजर इमेज देख सके */
+}
+
+.bh-vertical-preview-card:hover .bh-scroll-track img {
+  transform: translateZ(40px); /* 3D Pop Out: Images card se bahar aati hui lagengi */
+  filter: brightness(1.1);
+}
+
+/* Infinite Up to Down Animation */
+@keyframes scrollUpToDown {
+  0% {
+    transform: translateY(-50%); /* Starts half-way up */
+  }
+  100% {
+    transform: translateY(0%); /* Slides down perfectly to create seamless loop */
+  }
+}
+
