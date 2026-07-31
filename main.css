@@ -1580,3 +1580,130 @@ grid-template-columns:1fr;
     font-size: 28px;
   }
 }
+/* ==========================================================
+   CONTACT ME SECTION STYLES
+   ========================================================== */
+
+.bh-contact-section {
+  max-width: 1400px;
+  width: 95%;
+  margin: 100px auto 60px auto;
+  padding: 60px 40px;
+  background: #F8FAFC;
+  border-radius: 24px;
+  border: 1px solid #E2E8F0;
+  box-sizing: border-box;
+}
+
+.bh-contact-container {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.contact-badge {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0057FF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-heading {
+  font-size: 38px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 16px 0 44px 0;
+  line-height: 1.25;
+}
+
+/* Contact Cards Layout Grid */
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* Individual Interactive Card */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 26px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #E2E8F0;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 87, 255, 0.12);
+  border-color: #0057FF;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  background: #EFF6FF;
+  color: #0057FF;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-card:hover .card-icon {
+  background: #0057FF;
+  color: #FFFFFF;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.card-label {
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.card-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F172A;
+  word-break: break-all;
+}
+
+.card-arrow {
+  color: #94A3B8;
+  font-size: 20px;
+  font-weight: 700;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-card:hover .card-arrow {
+  transform: translate(4px, -4px);
+  color: #0057FF;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .bh-contact-section {
+    padding: 40px 20px;
+    margin: 60px auto 40px auto;
+  }
+  .contact-heading {
+    font-size: 28px;
+  }
+}
