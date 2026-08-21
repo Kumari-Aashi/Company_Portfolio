@@ -1191,7 +1191,7 @@
 
 /* Outer Side Container to handle 3D depth */
 .bh-motion-preview-side {
-  perspective: 1500px; /* Gives realistic 3D distance */
+  perspective: 500px; /* Gives realistic 3D distance */
 }
 
 /* The Main Card Box */
@@ -2538,5 +2538,111 @@ main.bh-main-content.main {
 
 
 
+.portfolio-slider {
+  width: 560px;
+}
 
+.portfolio-slider h4 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Image + buttons */
+.portfolio-image-area {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image */
+.portfolio-image-wrapper {
+  width: 100%;
+  height: 420px;
+
+  overflow: hidden;
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.portfolio-image-wrapper img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: opacity 0.25s ease;
+}
+
+
+/* =================================
+   SIDE BUTTONS
+================================= */
+
+.slider-btn {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  background: rgba(10, 8, 18, 0.85);
+  backdrop-filter: blur(0px);
+
+  color: #fff;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+  background: #222126;
+  border-color: #161618;
+
+  box-shadow: 0 0 20px rgba(108, 53, 255, 0.5);
+}
+
+
+/* Previous */
+.slider-prev {
+  left: -21px;
+}
+
+
+/* Next */
+.slider-next {
+  right: -21px;
+}
+
+
+/* Counter */
+.image-counter {
+  margin-top: 12px;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 13px;
+}
 

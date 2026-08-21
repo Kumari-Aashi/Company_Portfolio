@@ -55,3 +55,69 @@ setInterval(() => {
     slider.style.transform = `translateX(-${index * 320}px)`;
 
 },3000);
+
+
+
+// slider image 
+const portfolioImages = [
+  "assest/img1.jpeg",
+  "assest/img2.jpeg",
+  "assest/img3.jpeg",
+  "assest/img4.jpeg"
+];
+
+let currentImage = 0;
+
+const portfolioImage =
+  document.getElementById("portfolioImage");
+
+const nextBtn =
+  document.getElementById("nextBtn");
+
+const prevBtn =
+  document.getElementById("prevBtn");
+
+const imageCounter =
+  document.getElementById("imageCounter");
+
+
+function showImage(index) {
+
+  portfolioImage.style.opacity = "0";
+
+  setTimeout(() => {
+
+    portfolioImage.src =
+      portfolioImages[index];
+
+    portfolioImage.style.opacity = "1";
+
+    imageCounter.textContent =
+      `${index + 1} / ${portfolioImages.length}`;
+
+  }, 200);
+}
+
+
+nextBtn.addEventListener("click", () => {
+
+  currentImage++;
+
+  if (currentImage >= portfolioImages.length) {
+    currentImage = 0;
+  }
+
+  showImage(currentImage);
+});
+
+
+prevBtn.addEventListener("click", () => {
+
+  currentImage--;
+
+  if (currentImage < 0) {
+    currentImage = portfolioImages.length - 1;
+  }
+
+  showImage(currentImage);
+});
