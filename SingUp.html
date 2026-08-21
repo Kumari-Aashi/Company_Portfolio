@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Cinepixel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="singUp.css">
+    
+</head>
+<body>
+    <!-- header -->
+
+
+    <div class="login-card">
+        <div class="login-header">
+            <h1>Sign in to account</h1>
+            <p>Enter your credentials to access your dashboard</p>
+        </div>
+
+        <form id="signInForm">
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="email" id="email" required placeholder="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" required placeholder="name@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="••••••••">
+            </div>
+
+            <!-- <div class="form-actions">
+                <a href="#" class="forgot-pass">Forgot password?</a>
+            </div> -->
+           <br>
+            <button type="submit" class="btn-submit">Sign In</button>
+        </form>
+
+        <div class="divider">
+            <span>OR</span>
+        </div>
+
+        <button type="button" class="google-btn">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" width="18">
+            Continue with Google
+        </button>
+
+        <div id="statusMsg" class="status-msg"></div>
+
+        <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <script>
+        document.getElementById('signInForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const statusMsg = document.getElementById('statusMsg');
+
+            // Form handler demo logic
+            if (email && password) {
+                statusMsg.textContent = "Successfully signed in! Redirecting...";
+                statusMsg.className = "status-msg success";
+                
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 1500);
+            } else {
+                statusMsg.textContent = "Please fill in all required fields.";
+                statusMsg.className = "status-msg error";
+            }
+        });
+    </script>
+
+</body>
+</html>

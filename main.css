@@ -1,7 +1,10 @@
+
+
 *{
     margin: 0;
     font-family:Arial;
     border: border-box;
+    
 
 }
 
@@ -1050,6 +1053,15 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.bh-five-column-showcase img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
 }
 
 /* Row 4: Product Packaging Grid System */
@@ -1059,18 +1071,32 @@
   gap: 24px;
 }
 
+.bh-triple-column-showcase img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
 /* Responsive Overrides */
 @media (max-width: 992px) {
-  .bh-experience-container, .bh-motion-split-screen {
+  .bh-experience-container,
+  .bh-motion-split-screen {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 40px;
   }
+
   .bh-five-column-showcase {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .bh-triple-column-showcase {
     grid-template-columns: 1fr;
+  }
+
+  .bh-triple-column-showcase img {
+    height: 300px;
   }
 }
 
@@ -1232,7 +1258,7 @@
 }
 /* Interactive Hover Actions */
 .bh-vertical-preview-card:hover .bh-scroll-track {
-  animation-play-state: paused; /* Hover करने पर स्क्रॉल रुक जाएगा ताकि यूजर इमेज देख सके */
+  animation-play-state: paused; /* Hover
 }
 
 .bh-vertical-preview-card:hover .bh-scroll-track img {
@@ -1587,130 +1613,296 @@ grid-template-columns:1fr;
 /* ==========================================================
    CONTACT ME SECTION STYLES
    ========================================================== */
+/* =========================================
+   CONTACT SECTION
+========================================= */
 
 .bh-contact-section {
-  max-width: 100% ;
-  width: 95%;
-  margin-left: 2.5%;
-  border-radius: 16px;
-  padding: 60px 40px;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  box-sizing: border-box;
+  position: relative;
+  padding: 90px 30px;
+  background: #0b0710;
 }
 
 .bh-contact-container {
-  text-align: center;
-
-  max-width: 840px;
+  max-width: 1800px;
   margin: 0 auto;
+  padding: 70px 55px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 22px;
+  background: rgba(12, 7, 17, 0.75);
+  box-sizing: border-box;
 }
 
 .contact-badge {
-  font-size: 14px;
-  font-weight: 600;
-  color: #0057FF;
+  display: block;
+  text-align: center;
+  color: #696d76;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  margin-bottom: 25px;
 }
 
 .contact-heading {
-  font-size: 38px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-size: clamp(36px, 4vw, 58px);
   font-weight: 800;
-  color: #0F172A;
-  margin: 16px 0 44px 0;
-  line-height: 1.25;
+  line-height: 1.1;
 }
 
-/* Contact Cards Layout Grid */
-.contact-cards-grid {
+.contact-subheading {
+  max-width: 700px;
+  margin: 22px auto 45px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   MAIN GRID
+========================================= */
+
+.contact-main-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 18px;
+  max-width: 1270px;
+  margin: 0 auto;
 }
 
-/* Individual Interactive Card */
+.direct-contact-panel,
+.query-form-panel {
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  background: rgba(20, 15, 26, 0.72);
+  box-sizing: border-box;
+}
+
+.direct-contact-panel h3,
+.query-form-panel h3 {
+  margin: 0 0 28px;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   CONTACT CARDS
+========================================= */
+
 .contact-card {
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 22px 26px;
-  background: #FFFFFF;
-  border-radius: 16px;
+  gap: 20px;
+
+  width: 100%;
+  min-height: 96px;
+  padding: 18px;
+
+  margin-bottom: 18px;
+
+  box-sizing: border-box;
+
   text-decoration: none;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-  border: 1px solid #E2E8F0;
-  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-              box-shadow 0.3s ease,
-              border-color 0.3s ease;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
 }
 
 .contact-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(0, 87, 255, 0.12);
-  border-color: #0057FF;
+  transform: translateY(-10px);
+  border-color: rgba(59, 62, 66, 0.45);
+  background: rgba(30, 25, 40, 0.8);
 }
 
 .card-icon {
-  width: 50px;
-  height: 50px;
-  background: #EFF6FF;
-  color: #0057FF;
-  border-radius: 12px;
+  flex-shrink: 0;
+
+  width: 58px;
+  height: 58px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
-.contact-card:hover .card-icon {
-  background: #0057FF;
-  color: #FFFFFF;
+  border-radius: 14px;
+
+  color: #161617;
+  background: #cdd5e2;
 }
 
 .card-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-grow: 1;
+  min-width: 0;
+  flex: 1;
 }
 
 .card-label {
-  font-size: 13px;
-  color: #64748B;
-  font-weight: 500;
-  margin-bottom: 2px;
+  display: block;
+  margin-bottom: 5px;
+
+  color: rgba(145, 142, 142, 0.55);
+  font-size: 14px;
 }
 
 .card-value {
+  display: block;
+
+  color: #fff;
   font-size: 16px;
   font-weight: 700;
-  color: #0F172A;
-  word-break: break-all;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-arrow {
-  color: #94A3B8;
-  font-size: 20px;
-  font-weight: 700;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: #8fa8c5;
+  font-size: 25px;
+  transition: transform 0.3s ease;
 }
 
 .contact-card:hover .card-arrow {
-  transform: translate(4px, -4px);
-  color: #0057FF;
+  transform: translate(3px, -3px);
+  
 }
 
-/* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
-  .bh-contact-section {
-    padding: 40px 20px;
-    margin: 60px auto 40px auto;
-  }
-  .contact-heading {
-    font-size: 28px;
-  }
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+
+  outline: none;
+
+  background: rgba(5, 3, 10, 0.65);
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-group input,
+.form-group select {
+  height: 58px;
+  padding: 0 16px;
+}
+
+.form-group textarea {
+  min-height: 115px;
+  padding: 16px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.40);
+}
+
+.form-group select {
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: #100b17;
+  color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2f3b49;
+  box-shadow: 0 0 0 3px rgba(20, 125, 255, 0.10);
+}
+
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.query-submit-btn {
+  width: 100%;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    90deg,
+   white,
+    #070809
+  );
+
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.query-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(153, 160, 183, 0.25);
+}
+
+.query-submit-btn:active {
+  transform: translateY(0);
 }
 /* ==========================================================
    DASHBOARD STYLES (MATCHES BEHANCE THEME)
@@ -2109,3 +2301,242 @@ grid-template-columns:1fr;
     grid-template-columns: 1fr;
   }
 }
+
+
+.main{
+  background-color: #085caf;
+  
+}
+
+
+
+
+
+/* ==========================================
+   CINEPIXEL - DARK CINEMATIC THEME
+   ========================================== */
+
+html {
+  background: #08090d !important;
+}
+
+body#id-body {
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 12% 15%,
+      rgba(180, 35, 110, 0.20),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(80, 40, 180, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(120, 30, 100, 0.12),
+      transparent 35%
+    ),
+    #08090d !important;
+
+  color: #ffffff;
+}
+
+
+/* MAIN BACKGROUND */
+main.bh-main-content.main {
+  background: transparent !important;
+}
+
+
+/* NAVBAR */
+.bh-header {
+  background: rgba(52, 36, 52, 0.94) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+
+/* NAVBAR TEXT */
+.bh-logo,
+.bh-link {
+  color: #ffffff !important;
+}
+
+.bh-link:hover {
+  color: #ff4f9a !important;
+}
+
+.bh-logo-text {
+  color: #ffffff !important;
+}
+
+
+/* SEARCH */
+.bh-search-input {
+  background: rgba(255,255,255,0.08) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+}
+
+.bh-search-input::placeholder {
+  color: rgba(255,255,255,0.55);
+}
+
+
+/* HERO / CREATIVE PORTFOLIO CARD */
+.bh-software-canvas {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.07),
+      rgba(255,255,255,0.025)
+    ) !important;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+
+/* HERO TITLE */
+.logo-text h3 {
+  color: #ffffff !important;
+}
+
+
+/* ABOUT */
+.section-badge {
+  color: #c7c7c7 !important;
+}
+
+.main-heading {
+  color: #ffffff !important;
+}
+
+.bio-paragraph {
+  color: rgba(255,255,255,0.68) !important;
+}
+
+.meta-info-row {
+  border-color: rgba(255,255,255,0.12) !important;
+}
+
+.meta-info-row div strong {
+  color: #ffffff !important;
+}
+
+.meta-info-row div p {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+
+/* EXPERIENCE */
+.bh-exp-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.025)
+    ) !important;
+
+  border: 1px solid rgba(255,255,255,0.08) !important;
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,0.3);
+}
+
+.exp-huge-heading {
+  color: #ffffff !important;
+}
+
+.bh-exp-card h3,
+.exp-company {
+  color: #ffffff !important;
+}
+
+.bh-exp-card p,
+.exp-desc,
+.exp-timeline {
+  color: rgba(255,255,255,0.62) !important;
+}
+
+
+/* MOTION SECTION */
+.bh-motion-split-screen {
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(190, 45, 140, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(90, 45, 190, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    ) !important;
+
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+
+/* DASHBOARD */
+.bh-dashboard-section {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.025)
+    ) !important;
+
+  border: 1px solid rgba(255,255,255,0.08) !important;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.35);
+}
+
+
+/* CONTACT */
+.bh-contact-section {
+  background: transparent !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+/* 
+
+/* GLOW ON CARDS */
+.bh-exp-card:hover,
+.contact-card:hover,
+.preview-card:hover,
+.grid-card:hover {
+  border-color: rgba(190,70,255,0.45) !important;
+
+  box-shadow:
+    0 20px 60px rgba(130,40,190,0.18);
+}
+
+
+/* FOOTER */
+.bh-mega-footer {
+  background: #050609 !important;
+}
+
+
+
+
+
+/* END */
+
+
+
+
+

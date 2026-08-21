@@ -10,16 +10,17 @@
 
     <title>Cinepixel</title>
 </head>
-<body>
+<body id="id-body">
+  
      <!-- Behance Style Navigation Engine -->
-<header class="bh-header">
+<header class="bh-header" style="background-color: rgb(86, 48, 48);">
   <div class="bh-nav-container">
     
     <!-- Left Section: Logo & Primary Links -->
 <div class="bh-nav-left">
   <a href="index.html" class="bh-logo">
-    <span class="bh-logo-box" style="background-color:white;">
-      <img src="assest/logo.jpeg" style="width: 50px; height: 50px; border-radius: 50%; padding-top: 2px;" alt="Logo" class="bh-logo-img">
+    <span class="bh-logo-box bh-header" style="padding: 2px;">
+      <img src="assest/logo.jpeg" style="width: 50px; height: 50px; padding-top: 2px;" alt="Logo" class="bh-logo-img">
     </span>
     <span class="bh-logo-text">CINEPIXEL</span>
   </a>
@@ -29,7 +30,7 @@
       <li><a href="#id-explore" class="bh-link" id="link-home">Explore</a></li>
       <li><a href="#about-grid" class="bh-link" id="link-home">About</a></li>
       
-      <li class="bh-dropdown-wrapper">
+      <!-- <li class="bh-dropdown-wrapper">
         <a href="#" class="bh-link dropdown-trigger">
           Resources <i class="fa-solid fa-chevron-down drop-icon"></i>
         </a>
@@ -39,7 +40,9 @@
           <a href="#">Another action</a>
           <a href="#">Something else here</a>
         </div>
-      </li>
+      </li> -->
+      <li><a href="#contact" class="bh-link" id="link-home">Contact</a></li>
+      
       
     </ul>
   </nav>
@@ -52,9 +55,10 @@
     </div>
 
     <!-- Right Section: Action Utilities -->
-    <div class="bh-nav-right">
+    <div class="bh-nav-right" style="margin-right: 20px; gap: 10px; ">
      
-      <a href="contact.html" class="bh-link-login" id="link-contact">Sign In</a>
+      <a href="SingUp.html" class="bh-link" id="link-contact">Sign In</a>
+      <a href="Login.html" class="bh-link" id="link-contact">Login</a>
       
     </div>
 
@@ -71,7 +75,7 @@
 
       
 
-<main class="bh-main-content">
+<main class="bh-main-content main" >
   
   <!-- 1. Intro Header Section -->
   <!-- <section class="bh-intro-header">
@@ -85,7 +89,7 @@
   </section> -->
 
   <!-- 2. Software Badges Canvas -->
-  <section class="bh-software-canvas">
+  <section class="bh-software-canvas" >
     <div class="bh-branding-logo">
       <!-- Your Custom Creative Portfolio Logo Shape -->
       <svg class="bh-logo-svg" viewBox="0 0 100 50">
@@ -100,7 +104,7 @@
      
     <!-- Float Software Badges around logo -->
     <div class="software-badge-container">
-      <span class="badge badge-dv"></span>
+      <span class="badge badge-dv">Dr</span>
       <span class="badge badge-pr">Pr</span>
       <span class="badge badge-ps">Ps</span>
       <span class="badge badge-ae">Ae</span>
@@ -112,7 +116,7 @@
     
     <div class="about-grid" >
       <div class="about-image-col">
-        <img src="image" class="quennel-photo" alt="Quennel Damairo">
+        <img src="https://images.unsplash.com/photo-1786911111890-4de3e1505eca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0Nnx8fGVufDB8fHx8fA%3D%3D" class="quennel-photo" alt="Quennel Damairo">
       </div>
       <div class="about-text-col">
         <span class="section-badge">About me</span>
@@ -273,20 +277,23 @@
     <div class="bh-motion-text-side">
       <!-- Sliced Graphic Animation integrated directly inside layout context -->
       <div class="mg-glitch-container">
-        <span class="mg-static-text">Motion</span>
-        <div class="mg-sliced-wrapper">
-          <span class="mg-layer layer-top">Graphic.</span>
-          <span class="mg-layer layer-bottom">Graphic.</span>
-        </div>
-      </div>
-      <p class="slide-subtitle">Created engaging motion visuals for social media and commercial use combining typography, shapes, and animation to deliver clear messages that match the brand's tone and rhythm.</p>
+  <span class="mg-static-text" style="color: white;">Motion</span>
+  <span class="mg-static-text" style="color: white;">Graphics.</span>
+</div>
+      <p class="slide-subtitle">Created engaging motion visuals for social media and commercial use, 
+        combining typography, shapes, transitions, and animation to deliver clear 
+        and compelling messages that align with each brand’s tone,
+         visual identity, and rhythm. Developed dynamic content designed to capture attention, 
+        communicate ideas effectively, and maintain consistency across different platforms and formats.</p>
     </div>
+    
  <br>
-        
+    <h4>PORTFOLIO SHOTS</h4> 
   <!-- 3D Perspective Wrapper -->
   <div class="bh-scroll-track-wrapper">
     <!-- Scrolling Track Container -->
-    <div class="bh-scroll-track">
+     <h4>PORTFOLIO SHOTS</h4>
+    <div class="bh-scroll-track" >
       <!-- Original Set of Images -->
       <img src="assest/img1.jpeg" alt="Work 1">
       <img src="assest/img2.jpeg" alt="Work 2">
@@ -294,17 +301,14 @@
       <img src="assest/img4.jpeg" alt="Work 4">
       
       <!-- Duplicated Set for Seamless Infinite Loop -->
-      <img src="assest/img5.jpeg" alt="Work 1">
+       <img src="assest/img5.jpeg" alt="Work 1">
       <img src="assest/img1.jpeg" alt="Work 2">
       <img src="assest/img2.jpeg" alt="Work 3">
       <img src="assest/img4.jpeg" alt="Work 4">
-    
+     
   </div>
-  <div class="card-overlay-title">PORTFOLIO SHOTS</div>
-</div>
-     <div class="image-wrapper">
-  <img src="assest/img1.jpeg" alt="The Louvre Di Paris">
-</div>
+  
+
         <div class="card-overlay-title">THE LOUVRE DI PARIS</div>
       </div>
     </div>
@@ -482,40 +486,163 @@
 <!-- ==========================================================
        CONTACT ME SECTION (Place directly above <footer>)
        ========================================================== -->
-  <section class="bh-contact-section reveal">
-    <div class="bh-contact-container">
-      <span class="contact-badge">(5) Get In Touch</span>
-      <h2 class="contact-heading">Let's work together on your next project</h2>
+  <section class="bh-contact-section reveal" id="contact">
+  <div class="bh-contact-container">
 
-      <div class="contact-cards-grid">
-        <!-- 1. Email Card (Opens email composer on click) -->
-        <a href="anukalpsinha12@gmail.com?subject=Project%20Inquiry%20-%20Portfolio" class="contact-card email-card">
+    <span class="contact-badge">(5) Get In Touch</span>
+
+    <h2 class="contact-heading">
+      Let's work together on your next project
+    </h2>
+
+    <p class="contact-subheading">
+      Have a question or idea? Fill out the form and I'll get back to you as soon as possible.
+    </p>
+
+    <div class="contact-main-grid">
+
+      <!-- ================= LEFT: DIRECT CONTACT ================= -->
+      <div class="direct-contact-panel">
+
+        <h3>Reach me directly</h3>
+
+        <!-- Email Card -->
+        <a
+          href="mailto:anukalpsinha12@gmail.com?subject=Project%20Inquiry%20-%20Portfolio"
+          class="contact-card email-card"
+        >
           <div class="card-icon">
-            <!-- Inline Mail SVG Icon -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
           </div>
+
           <div class="card-info">
             <span class="card-label">Send an Email</span>
             <span class="card-value">anukalpsinha12@gmail.com</span>
           </div>
+
           <div class="card-arrow">↗</div>
         </a>
 
-        <!-- 2. Phone / Mobile Card (Triggers phone dialer on click) -->
-        <a href="tel:+6281234567890" class="contact-card phone-card">
+        <!-- WhatsApp Card -->
+        <a
+          href="https://wa.me/6281234567890"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card phone-card"
+        >
           <div class="card-icon">
-            <!-- Inline Phone SVG Icon -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+              19.79 19.79 0 0 1-8.63-3.07
+              19.5 19.5 0 0 1-6-6
+              19.79 19.79 0 0 1-3.07-8.67
+              A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2
+              1.72 12.84 12.84 0 0 0 .7 2.81
+              2 2 0 0 1-.45 2.11L8.09 9.91
+              a16 16 0 0 0 6 6l1.27-1.27
+              a2 2 0 0 1 2.11-.45
+              12.84 12.84 0 0 0 2.81.7
+              A2 2 0 0 1 22 16.92z"></path>
+            </svg>
           </div>
+
           <div class="card-info">
             <span class="card-label">Call / WhatsApp</span>
             <span class="card-value">WhatsApp Number</span>
           </div>
+
           <div class="card-arrow">↗</div>
         </a>
+
       </div>
+
+
+      <!-- ================= RIGHT: QUERY FORM ================= -->
+      <div class="query-form-panel">
+
+        <h3>Send me a query</h3>
+
+        <form id="contactQueryForm">
+
+          <!-- Name + Email -->
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="queryName">Your Name</label>
+              <input
+                type="text"
+                id="queryName"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="queryEmail">Your Email</label>
+              <input
+                type="email"
+                id="queryEmail"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              >
+            </div>
+
+          </div>
+
+
+          <!-- Subject -->
+          <div class="form-group">
+            <label for="querySubject">Subject</label>
+
+            <input
+              type="text"
+              id="querySubject"
+              name="subject"
+              placeholder="Enter a subject"
+              required
+            >
+          </div>
+
+          <!-- Query -->
+          <div class="form-group">
+            <label for="queryMessage">Your Query</label>
+
+            <textarea
+              id="queryMessage"
+              name="message"
+              rows="5"
+              placeholder="Write your message or project details..."
+              required
+            ></textarea>
+          </div>
+
+
+          <!-- Submit -->
+          <button type="submit" class="query-submit-btn">
+            <svg width="19" height="19" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+
+            <span>Send Query</span>
+          </button>
+
+        </form>
+
+      </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
 
 
   <!-- 5. FIXED BOTTOM HIRING TOAST -->
