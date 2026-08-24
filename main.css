@@ -541,7 +541,7 @@
 
 .meta-info-row div strong {
   font-size: 14px;
-  color: #232323;
+  color: #ebdede;
   text-transform: uppercase;
 }
 
@@ -549,7 +549,7 @@
   font-size: 14px;
   font-weight: 600;
   margin: 4px 0 0 0;
-  color: #2a2323;
+  color: #f2f1f1;
   opacity: 0.5;
 }
 
@@ -1931,7 +1931,7 @@ grid-template-columns:1fr;
 .dash-badge {
   font-size: 13px;
   font-weight: 700;
-  color: #0057FF;
+  color: #e0e5f0;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1939,7 +1939,7 @@ grid-template-columns:1fr;
 .dash-title {
   font-size: 32px;
   font-weight: 800;
-  color: #0F172A;
+  color: #c0c3cc;
   margin-top: 6px;
 }
 
@@ -2430,9 +2430,6 @@ main.bh-main-content.main {
   color: #ffffff !important;
 }
 
-.meta-info-row div p {
-  color: rgba(255,255,255,0.6) !important;
-}
 
 
 /* EXPERIENCE */
