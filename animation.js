@@ -121,3 +121,32 @@ prevBtn.addEventListener("click", () => {
 
   showImage(currentImage);
 });
+
+
+
+// for singIn
+document.getElementById('signInForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const statusMsg = document.getElementById('statusMsg');
+
+            // Form handler demo logic
+            if (email && password) {
+                statusMsg.textContent = "Successfully signed in! Redirecting...";
+                statusMsg.className = "status-msg success";
+                
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 1500);
+            } else {
+                statusMsg.textContent = "Please fill in all required fields.";
+                statusMsg.className = "status-msg error";
+            }
+        });
+
+
+
+
+        

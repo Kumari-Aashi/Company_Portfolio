@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <!-- <link rel="stylesheet" href="test.css"> -->
+    <link rel="stylesheet" href="previousWork.css">
 
     <title>Cinepixel</title>
 </head>
@@ -141,48 +141,171 @@
       </div>
     </div>
      <br><br>
-<!-- Work Experience -->
-<section class="bh-experience-section">
-  <!-- Centered Heading Header -->
-  <div class="bh-exp-header">
-    <h1 class="exp-huge-heading">Work Experience</h1>
-  </div>
 
-  <!-- Cards Container in Row Grid -->
-  <div class="bh-exp-row-grid">
-    
-    <!-- Experience Card 1 -->
-    <div class="bh-exp-card">
-      
-      <h3 class="exp-company">Kasoem Group</h3>
-      <span class="exp-timeline">September 2023 - September 2024 | Graphic Designer</span>
-      <p class="exp-desc">
-        Sometimes stepping in as Videographer & Photographer. Here I blended design with storytelling. Not just visuals on paper, but full experiences — from graphics to photo and video productions that brought campaigns to life.
-      </p>
+  </section>
+
+
+<!-- Previous Work Section -->
+<section class="pw-section">
+  <div class="pw-container">
+
+    <div class="pw-header">
+      <h2>Previous Work</h2>
+      <div class="pw-underline"></div>
+      <p>A look at some of my previous work and collaborations.</p>
     </div>
 
-    <!-- Experience Card 2 -->
-    <div class="bh-exp-card">
-      
-      <h3 class="exp-company">KPURI</h3>
-      <span class="exp-timeline">August 2024 - December 2024 | Freelance Videographer / Editor</span>
-      <p class="exp-desc">
-        Contributed to nationwide campaigns by handling video production end-to-end — from capturing the essence of events, color grading for consistency, to editing impactful final cuts.
-      </p>
+    <!-- Slider -->
+    <div class="pw-slider">
+
+      <!-- Previous Button -->
+      <button type="button" class="pw-nav pw-prev" id="pwPrevBtn" aria-label="Previous work">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <!-- WORK 1 -->
+      <div class="pw-card pw-work active">
+        <div class="pw-card-left">
+          <div class="pw-client-header">
+            <img src="assets/work1-logo.png" alt="Kasoom Group" class="pw-client-logo">
+            <div class="pw-client-info">
+              <h3>Kasoom Group</h3>
+              <span class="pw-location-tag">Graphic Designer</span>
+            </div>
+          </div>
+          <div class="pw-divider"></div>
+          <div class="pw-details-list">
+            <div class="pw-detail-item">
+              <div class="pw-detail-icon">📅</div>
+              <div class="pw-detail-content">
+                <h4>Duration</h4>
+                <p>September 2023 – September 2024</p>
+              </div>
+            </div>
+            <div class="pw-detail-item">
+              <div class="pw-detail-icon">🎨</div>
+              <div class="pw-detail-content">
+                <h4>Role</h4>
+                <p>Graphic Designer, Videographer & Photographer</p>
+              </div>
+            </div>
+            <div class="pw-detail-item">
+              <div class="pw-detail-icon">✦</div>
+              <div class="pw-detail-content">
+                <h4>Experience</h4>
+                <p>Blended graphic design with photography and video production to bring campaigns to life.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pw-card-right">
+          <div class="pw-image-wrapper">
+            <img src="assets/work1.jpg" alt="Kasoom Group work">
+          </div>
+        </div>
+      </div>
+
+      <!-- WORK 2 -->
+      <div class="pw-card pw-work">
+        <div class="pw-card-left">
+          <div class="pw-client-header">
+            <img src="assets/work2-logo.png" alt="KPURI" class="pw-client-logo">
+            <div class="pw-client-info">
+              <h3>KPURI</h3>
+              <span class="pw-location-tag">Freelance Videographer / Editor</span>
+            </div>
+          </div>
+          <div class="pw-divider"></div>
+          <div class="pw-details-list">
+            <div class="pw-detail-item">
+              <div class="pw-detail-icon">📅</div>
+              <div class="pw-detail-content">
+                <h4>Duration</h4>
+                <p>August 2024 – December 2024</p>
+              </div>
+            </div>
+            <div class="pw-detail-item">
+              <div class="pw-detail-icon">🎥</div>
+              <div class="pw-detail-content">
+                <h4>Role</h4>
+                <p>Videographer & Video Editor</p>
+              </div>
+            </div>
+            <div class="pw-detail-item">
+              <div class="pw-detail-icon">✦</div>
+              <div class="pw-detail-content">
+                <h4>Experience</h4>
+                <p>Worked on nationwide campaigns, handling video production, color grading and final editing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pw-card-right">
+          <div class="pw-image-wrapper">
+            <img src="assets/work2.jpg" alt="KPURI work">
+          </div>
+        </div>
+      </div>
+
+      <!-- WORK 3 -->
+      <div class="pw-card pw-work">
+        <div class="pw-card-left">
+          <div class="pw-client-header">
+            <img src="assets/work3-logo.png" alt="Putih Agency" class="pw-client-logo">
+            <div class="pw-client-info">
+              <h3>Putih Agency</h3>
+              <span class="pw-location-tag">Senior Videographer / Editor</span>
+            </div>
+          </div>
+          <div class="pw-divider"></div>
+          <div class="pw-details-list">
+            <div class="pw-detail-item">
+              <div class="pw-detail-icon">📅</div>
+              <div class="pw-detail-content">
+                <h4>Duration</h4>
+                <p>January 2025 – January 2026</p>
+              </div>
+            </div>
+            <div class="pw-detail-item">
+              <div class="pw-detail-icon">🎬</div>
+              <div class="pw-detail-content">
+                <h4>Role</h4>
+                <p>Senior Videographer & Editor</p>
+              </div>
+            </div>
+            <div class="pw-detail-item">
+              <div class="pw-detail-icon">✦</div>
+              <div class="pw-detail-content">
+                <h4>Experience</h4>
+                <p>Led the creative flow of video production, supervising editors and ensuring quality, impact and clarity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pw-card-right">
+          <div class="pw-image-wrapper">
+            <img src="assets/work3.jpg" alt="Putih Agency work">
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Button -->
+      <button type="button" class="pw-nav pw-next" id="pwNextBtn" aria-label="Next work">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
     </div>
 
-    <!-- Experience Card 3 -->
-    <div class="bh-exp-card">
-      
-      <h3 class="exp-company">Putih Agency</h3>
-      <span class="exp-timeline">January 2025 - January 2026 | Senior Videographer / Editor</span>
-      <p class="exp-desc">
-        Leading the creative flow of video production — from supervising editors to ensuring every final cut delivers impact and clarity.
-      </p>
+    <!-- Page indicator -->
+    <div class="pw-pagination">
+      <span class="pw-page active"></span>
+      <span class="pw-page"></span>
+      <span class="pw-page"></span>
     </div>
 
   </div>
 </section>
+
   </section>
  <section class="hero" id="id-explore">
 
@@ -236,7 +359,7 @@
 <section class="video-gallery">
 
     <div class="video-card">
-        <video autoplay muted loop playsinline controls>
+        <video  muted loop playsinline controls>
             <source src="assest/vi1.mp4">
         </video>
     </div>
@@ -344,7 +467,7 @@
   </div>
 
   <!-- ROW 3: 5-COLUMN CONTINUOUS VERTICAL GRID -->
-  <div class="bh-five-column-showcase reveal">
+  <!-- <div class="bh-five-column-showcase reveal">
     <div class="grid-card"><img src="assest/img1.jpeg" alt="Pake kartu biasa"></div>
     <div class="grid-card"><img src="assest/img10.jpeg" alt="Foto"></div>
     <div class="grid-card"><img src="assest/img7.jpeg" alt="When Traveling"></div>
@@ -355,7 +478,7 @@
     <div class="grid-card"><img src="assest/img5.jpeg" alt="Extra Card"></div>
     <div class="grid-card"><img src="assest/img8.jpeg" alt="SIM Card"></div>
     <div class="grid-card"><img src="assest/img10.jpeg" alt="Extra Card"></div>
-  </div>
+  </div> -->
 
   <!-- ROW 4: 3-COLUMN PACKAGING SHOWCASE -->
   <div class="bh-triple-column-showcase reveal">
@@ -509,7 +632,7 @@
   
   <div class="bh-contact-container" id="contact">
 
-    <span class="contact-badge">(5) Get In Touch</span>
+    <span class="contact-badge">Get In Touch</span>
 
     <h2 class="contact-heading">
       Let's work together on your next project
@@ -578,6 +701,55 @@
 
           <div class="card-arrow">↗</div>
         </a>
+
+<!-- Facebook Card -->
+<a
+  href="https://www.facebook.com/share/14mxtFLh46y/?mibextid=wwXIfr"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="contact-card facebook-card"
+>
+  <div class="card-icon">
+    <svg width="24" height="24" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+    </svg>
+  </div>
+
+  <div class="card-info">
+    <span class="card-label">Facebook</span>
+    <span class="card-value">Follow me on Facebook</span>
+  </div>
+
+  <div class="card-arrow">↗</div>
+</a>
+
+
+<!-- Instagram Card -->
+<a
+  href="https://www.instagram.com/cinepixel_media?igsh=Ymh1c3lqYWtrNjZx&utm_source=qr"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="contact-card instagram-card"
+>
+  <div class="card-icon">
+    <svg width="24" height="24" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+      <circle cx="12" cy="12" r="4"></circle>
+      <circle cx="17.5" cy="6.5" r="1"></circle>
+    </svg>
+  </div>
+
+  <div class="card-info">
+    <span class="card-label">Instagram</span>
+    <span class="card-value">Follow me on Instagram</span>
+  </div>
+
+  <div class="card-arrow">↗</div>
+</a>
+
+
 
       </div>
 
@@ -755,6 +927,6 @@
   </div>
 </footer>
 <script src="animation.js"></script>
-<!-- <script src="test.js"></script> -->
+<script src="previousWork.js"></script> 
 </body>
 </html>

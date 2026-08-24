@@ -1,0 +1,179 @@
+
+
+.pw-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+.pw-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pw-header h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.pw-underline {
+    width: 50px;
+    height: 3px;
+    background: #c084fc;
+    margin: 0 auto 12px;
+}
+
+.pw-slider {
+    position: relative;
+    width: 100%;
+}
+
+/* Hide every work by default */
+.pw-slider .pw-work {
+    display: none;
+    width: 100%;
+}
+
+/* Active card layout */
+.pw-slider .pw-work.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    animation: pwSlideIn 0.45s ease;
+}
+
+.pw-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.pw-client-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.pw-client-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.pw-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+.pw-detail-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.pw-detail-content h4 {
+    margin: 0 0 4px 0;
+}
+
+.pw-detail-content p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.pw-image-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+}
+
+.pw-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+@keyframes pwSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fix Button Overlap & Clickability */
+.pw-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(15, 23, 42, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 100; /* Ensure button sits above cards */
+    pointer-events: auto;
+    transition: all 0.2s ease;
+}
+
+.pw-prev {
+    left: -24px;
+}
+
+.pw-next {
+    right: -24px;
+}
+
+.pw-nav:hover {
+    background: #c084fc;
+    color: #0f172a;
+    border-color: #c084fc;
+    box-shadow: 0 0 15px rgba(192, 132, 252, 0.5);
+}
+
+.pw-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.pw-page {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pw-page.active {
+    width: 28px;
+    height: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .pw-slider .pw-work.active {
+        grid-template-columns: 1fr;
+    }
+    .pw-prev {
+        left: 0px;
+    }
+    .pw-next {
+        right: 0px;
+    }
+}
